@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LargeButton from "./components/LargeButton";
 import TodoList from "./components/TodoList";
 
 function App() {
@@ -15,6 +16,11 @@ function App() {
         Task List
       </h1>
     <TodoList items={todos} onItemClick={val =>onItemClick(val)}/>
+    <section>
+      <h1>Large Button Task</h1>
+      <LargeButton  isActive={true} text="Active Button"/>
+      <LargeButton  isActive={false} text="Inactive Button"/>
+    </section>
     </div>
   );
 }
